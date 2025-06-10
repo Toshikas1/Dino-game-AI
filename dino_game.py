@@ -46,7 +46,7 @@ class NeuralNetwork:
         for i in range(len(inputs)):
             prediction += inputs[i] * self.jump_weights[i]
         for g in range(len(inputs)):
-            prediction2 += inputs[i] * self.duck_weights[i]
+            prediction2 += inputs[g] * self.duck_weights[g]
         prediction += self.biases[0]
         prediction2 += self.biases[1]
         return [sigmoid(prediction), sigmoid(prediction2)]
